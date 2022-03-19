@@ -11,7 +11,7 @@ def here():
     return '<h1>I Am Here at Circle CI !!</h1>'
 
 @app.route('/there')
-def here():
+def there():
     return '<h1>I Am There at Circle CI !!</h1>'
 
 if __name__=="__main__":
