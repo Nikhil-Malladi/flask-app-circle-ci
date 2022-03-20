@@ -1,18 +1,19 @@
 from flask import Flask
+from flask import jsonify
 
 app=Flask(__name__)
 
 @app.route('/')
-def hello():
-    return '<h1>I want to Deploy Flask to Circle CI !!</h1>'
+def home():
+    return jsonify({'status_code': 1,'message':'successfully enrouted to home'})
 
-@app.route('/here')
-def here():
-    return '<h1>I Am Here at Circle CI !!</h1>'
+@app.route('/playground')
+def playground():
+    return jsonify({'status_code':1,'message':'successfully enrouted to playground'})
 
-@app.route('/there')
-def there():
-    return '<h1>I Am There at Circle CI !!</h1>'
+@app.route('/theatre')
+def theatre():
+    return jsonify({'status_code':1,'message':'successfully enrouted to Movie Theatre'})
 
 if __name__=="__main__":
     app.run()
